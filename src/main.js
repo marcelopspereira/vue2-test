@@ -1,16 +1,19 @@
 import Vue from "vue";
+import { Time } from "./time";
 
-
-new Vue({
+var app = new Vue({
   el: "#app",
   data: {
-    titulo: "Minha primeira aplicação Vue.js 2",
-    bool: false,
-    numeroInteiro: 10,
-    numeroFloat: 20.1,
-    object: {
-      name: "Marcelo PS"
-    },
-    link: "http://localhost:8080"
+    times: [
+      new Time("America PR", require("./assets/atletico-pr_60x60.png")),
+      new Time("America MG", require("./assets/atletico_mg_60x60.png"))
+    ],
+    alfabeto: {
+      a: "A",
+      b: "B",
+      c: "C",
+      d: "D",
+      e: "E"
+    }
   }
 });

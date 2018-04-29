@@ -7,9 +7,24 @@
 </head>
 
 <body>
-  <div id="app"></div>
-  <h1 v-binding:id="numeroInteiro">{{titulo}}</h1>
-  {{numeroInteiro}} {{numeroFloat}} {{bool}} {{object}}
+  <div id="app">
+    <ul>
+      <li v-for="(time, index) in times">
+        {{index+1}} {{ time.nome }}
+        <img :src="time.escudo" alt="">
+      </li>
+    </ul>
+    <ul>
+      <li v-for="x in 100">
+        {{x}}
+      </li>
+    </ul>
+    <ul>
+        <li v-for="(valor,chave,index) in alfabeto">
+          {{ index }} - {{ chave }} :{{ valor }}
+        </li>
+      </ul>
+  </div>
   <script src="/dist/build.js"></script>
 </body>
 

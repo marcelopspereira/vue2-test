@@ -66,9 +66,19 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(woff|woff2|tff|svg|eot)$/,
+        loader: 'url'
       }
     ]
   },
+  plugins:[
+    new webpack.ProvidePlugin({
+      'JQuery':'jquery',
+      Popper: ['popper.js', 'default']
+    })
+  ],
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'

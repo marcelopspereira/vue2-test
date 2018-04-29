@@ -3,7 +3,7 @@ export class Time {
     this.nome =nome;
     this.escudo=escudo;
 
-    this.ponto = 0;
+    this.pontos = 0;
     this.gm=0;
     this.gs=0;
   }
